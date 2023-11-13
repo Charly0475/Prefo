@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charly</title>
+    <link rel="stylesheet" href="intro.css" />
+  </head>
+  <body>
+    <div
+      class="fingerprint"
+      id="menu"
+      onclick="startanim();console.log('menu click');"
+    ></div>
+    <div class="fingerprint" id="interview">
+      <p><a href="interview.html">Interview</a></p>
+    </div>
+    <div class="fingerprint" id="entreprise">
+      <p><a href="entreprise.html">Entreprise</a></p>
+    </div>
+    <div class="fingerprint" id="exposition">
+      <p><a href="exposition.html">Exposition</a></p>
+    </div>
+    <div class="fingerprint" id="conclusion">
+      <p><a href="conclusion.html">Conclusion</a></p>
+    </div>
+
+    <script>
+      function startanim() {
+        document.getElementById("menu").style.animationName = "menu";
+        document.getElementById("interview").style.animationName = "interview";
+        document.getElementById("entreprise").style.animationName =
+          "entreprise";
+        document.getElementById("exposition").style.animationName =
+          "exposition";
+        document.getElementById("conclusion").style.animationName =
+          "conclusion";
+        var liens = document.querySelectorAll(".fingerprint p a");
+        liens.forEach((item) => (item.style.animationName = "opacite"));
+      }
+    </script>
+  </body>
+</html>

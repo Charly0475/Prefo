@@ -1,0 +1,100 @@
+.fingerprint {
+  background-image: url("/fingerprint.jpg");
+  background-repeat: no-repeat;
+  width: 215px;
+  height: 319px;
+  position: absolute;
+  left: calc(50% - (215px / 2));
+  top: 200px;
+}
+
+.fingerprint p {
+  text-align: center;
+  margin-top: 320px;
+}
+
+.fingerprint p a {
+  font-size: 300%;
+  color: linear-gradient(to right, #000402, #005028);
+  text-decoration: none;
+  opacity: 0;
+  animation: _opacite 2s linear 2s forwards;
+}
+
+#menu {
+  z-index: 100;
+  animation: _menu 2s linear 0s forwards;
+}
+
+#interview {
+  animation: _interview 2s linear 0s forwards;
+}
+
+#entreprise {
+  animation: _entreprise 2s linear 0s forwards;
+}
+
+#exposition {
+  animation: _exposition 2s linear 0s forwards;
+}
+
+#conclusion {
+  animation: _conclusion 2s linear 0s forwards;
+}
+
+/*#menu:focus, #menu:active {}*/
+
+@keyframes menu {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes interview {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500px) scale(0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes entreprise {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-200px) translateX(-200px) scale(0.5);
+  }
+}
+
+@keyframes exposition {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateY(-200px) translateX(200px) scale(0.5);
+  }
+}
+
+@keyframes conclusion {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(500px) scale(0.5);
+  }
+}
+
+@keyframes opacite {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
